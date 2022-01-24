@@ -1,0 +1,20 @@
+clear Lock 
+!ESC 9
+!	     key Shift+key Mod+key
+! Caps_Lock <-- Alt_L NoSymbol Alt_L
+!keycode 66 = Alt_L NoSymbol Alt_L
+! Control_L <-- Alt_L
+keycode 37 = Alt_L NoSymbol Alt_L
+! Alt_L <-- Control_L
+keycode 64 = Control_L NoSymbol Control_L
+
+
+keycode 66 = Mode_switch 
+clear Mod4
+!clear Mod5
+!add Mod4 = Mode_switch
+keysym h = h H Left
+keysym l = l L Right
+keysym k = k K Up
+keysym j = j J Down
+
