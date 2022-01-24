@@ -1,7 +1,13 @@
 # i3wm_config
 My i3wm configuration
 
+## feature
+- Macos-like key, Swaped `Control` and `Alt`. 
+- `Caps_Lock` + `hjkl` act as arrow `LEFT DOWN UP RIGHT` 
+- More keybinding details can be find in `i3config`
+- `Alt + Ctrl + a` for screen cut
 
+![](.resource/screen.png)
 
 ## dependencies
 - `flameshot` for screenshot.
@@ -17,13 +23,7 @@ My i3wm configuration
 sh ./install.sh
 ```
 
-## feature
-- Macos-like key, Swaped `Control` and `Alt`. 
-- `Caps_Lock` + `hjkl` act as arrow `LEFT DOWN UP RIGHT` 
-- More keybinding details can be find in `i3config`
-- `Alt + Ctrl + a` for screen cut
 
-![](.resource/screen.png)
 
 ## wallpaper
 You can put your own wallpapers to `~/Pictures/feh_wallpapers/`.
