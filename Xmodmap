@@ -10,7 +10,7 @@ keycode 64 = Control_L NoSymbol Control_L
 
 
 keycode 66 = Mode_switch 
-clear Mod4
+!clear Mod4
 !clear Mod5
 !add Mod4 = Mode_switch
 keysym h = h H Left
