@@ -56,7 +56,7 @@ mkdir ~/Pictures
 cp -r ./feh_wallpapers ~/Pictures/
 
 # 5. polybar
-copy_and_backup "$(pwd)/polybar/config.ini" "${HOME}/.config/polybar/mypolybar.ini"
+copy_and_backup "$(pwd)/polybar/config.ini" "${HOME}/.config/polybar/config"
 copy_and_backup "$(pwd)/polybar/launch.sh" "${HOME}/.config/polybar/launch.sh"
 
 # 6. evdev ???
