@@ -1,3 +1,5 @@
+
+
 function is_link(){	
 	if [ ! -L $1 ]; then
 		return 0
@@ -40,11 +42,11 @@ function copy_and_backup(){
 }
 
 # 1. i3 config 
-copy_and_backup "$(pwd)/i3config" "${HOME}/.i3/config"
+copy_and_backup "$(pwd)/i3config" "${HOME}/.config/i3/config"
 # 2. alacritty config
 copy_and_backup "$(pwd)/alacritty.yml" "${HOME}/.config/alacritty.yml"
 # 3. compton config 
-copy_and_backup "$(pwd)/compton.yml" "${HOME}/.config/compton.yml"
+copy_and_backup "$(pwd)/compton.conf" "${HOME}/.config/compton.conf"
 # 4. Xmodmap
 copy_and_backup "$(pwd)/Xmodmap" "${HOME}/.Xmodmap"
 
@@ -53,5 +55,8 @@ copy_and_backup "$(pwd)/Xmodmap" "${HOME}/.Xmodmap"
 mkdir ~/Pictures
 cp -r ./feh_wallpapers ~/Pictures/
 
+# 5. polybar
+copy_and_backup "$(pwd)/polybar_config" "${HOME}/.config/mypolybar.conf"
+
 # 6. evdev ???
-#sduo cp ./evdev /usr/share/X11/xkb/keycodes/
+sudo cp ./evdev /usr/share/X11/xkb/keycodes/

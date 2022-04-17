@@ -62,21 +62,27 @@ colors:
 #     cyan: '0x5FFDFF'
 #     white: '0xFEFFFF'
 background_opacity: 0.95
-key_bindings:
-  - { key: V,        mods: Control, action: Paste                  }
-  - { key: C,        mods: Control, action: Copy                   }
-  - { key: C,        mods: Control|Shift, chars: "\x03"         }
+#key_bindings:
+#  - { key: V,        mods: Control, action: Paste                  }
+#  - { key: C,        mods: Control, action: Copy                   }
+#  - { key: C,        mods: Control|Shift, chars: "\x03"         }
 window:
   padding:
     x: 10
     y: 10
   drynamic_padding: true
 font:
-  size: 12
   normal:
-    family: Noto Sans Mono
+    family: "Ubuntu Mono"
     style: Regular
   bold:
-    family: Noto Sans Mono
+    family: "Ubuntu Mono"
+    style: Bold
   italic:
-    family: Noto Sans Mono
+    family: "Ubuntu Mono"
+    style: Italic
+  bold_italic:
+    family: "Ubuntu Mono"
+    style: Bold Italic
+env:
+    TERM: xterm-256color

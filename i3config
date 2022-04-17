@@ -1,20 +1,25 @@
 # i3 config file (v4)
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-exec_alway --no-startup-id sh xmodmap ~/.Xmodmap
-
+exec_always xmodmap ~/.Xmodmap
+exec_always xset r rate 230 35
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
 set $mod Mod1
+
+# 设置 键盘 重复时间
+#xset r rate 200 25
+
+
 
 # set default desktop layout (default is tiling)
 # workspace_layout tabbed <stacking|tabbed>
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
-default_border pixel 2
+default_border pixel 3
 default_floating_border normal
 
 # Hide borders
-hide_edge_borders none
+#hide_edge_borders none
 
 # change borders
 #bindsym $mod+u border none
@@ -44,7 +49,7 @@ bindsym $mod+z exec --no-startup-id morc_menu
 ## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
 ################################################################################################
 
-exec --no-startup-id volumeicon
+exec --no-startup-id /usr/bin/volumeicon
 bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 #exec --no-startup-id pulseaudio
 #exec --no-startup-id pa-applet
@@ -57,34 +62,23 @@ bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 # bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
 
 # Start Applications
-bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
-bindsym $mod+F2 exec palemoon
-bindsym $mod+F3 exec pcmanfm
-# bindsym $mod+F3 exec ranger
-bindsym $mod+Shift+F3 exec pcmanfm_pkexec
-bindsym $mod+F5 exec terminal -e 'mocp'
-bindsym $mod+t exec --no-startup-id pkill picom
-bindsym $mod+Ctrl+t exec --no-startup-id picom -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
 #bindsym Print exec --no-startup-id i3-scrot
-bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
-bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
-bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
 focus_follows_mouse no
 
 # change focus
-#bindsym $mod+j focus left
-#bindsym $mod+k focus down
-#bindsym $mod+l focus up
-#bindsym $mod+semicolon focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+#bindsym $mod+h focus left
+#bindsym $mod+j focus down
+#bindsym $mod+k focus up
+#bindsym $mod+l focus right
 
 # move focused window
 #bindsym $mod+Shift+j move left
@@ -93,10 +87,10 @@ bindsym $mod+Right focus right
 #bindsym $mod+Shift+semicolon move right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # workspace back and forth (with/without active container)
 workspace_auto_back_and_forth yes
@@ -104,8 +98,8 @@ bindsym $mod+b workspace back_and_forth
 bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_and_forth
 
 # split orientation
-bindsym $mod+space split h;exec notify-send 'tile horizontally'
-bindsym $mod+Shift+space split v;exec notify-send 'tile vertically'
+bindsym $mod+Shift+space split h;exec notify-send 'tile horizontally' 
+bindsym $mod+space split v;exec notify-send 'tile vertically'
 #bindsym $mod+q split toggle
 
 # toggle fullscreen mode for the focused container
@@ -136,8 +130,8 @@ bindsym $mod+Shift+s sticky toggle
 #bindsym $mod+minus scratchpad show
 
 #navigate workspaces next / previous
-bindsym $mod+Ctrl+Right workspace next
-bindsym $mod+Ctrl+Left workspace prev
+bindsym $mod+Ctrl+h workspace prev
+bindsym $mod+Ctrl+l workspace next
 
 # Workspace names
 # to display names or symbols instead of plain workspace numbers you can use
@@ -146,7 +140,7 @@ bindsym $mod+Ctrl+Left workspace prev
 set $ws1 1「1浏览器」
 set $ws2 2「2终端」
 set $ws3 3「3Code」
-set $ws4 4「4」
+set $ws4 4「4Note」
 set $ws5 5「5」
 set $ws6 6「6」
 set $ws7 7「7」
@@ -185,12 +179,14 @@ bindsym $mod+Shift+0 move container to workspace $ws8; workspace $ws8
 # Open applications on specific workspaces
 # assign [class="Thunderbird"] $ws1
 assign [class="Pale moon"] $ws1
-assign [class="Google-chrome"] $ws1
-#assign [class="Sakura"] $ws2
+#assign [class="Google-chrome"] $ws1
+assign [class="Typora"] $ws4
 assign [class="Wine"] $ws8
-assign [class="Code"] $ws3
-assign [class="Google-chrome"] $ws1
-# assign [class="Pcmanfm"] $ws3
+#assign [class="Code"] $ws3
+#assign [class="Google-chrome"] $ws1
+assign [class="netease-cloud-music"] $ws8
+
+for_window [class="Matplotlib"] floating enable border pixel 1
 
 #Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
@@ -220,6 +216,9 @@ for_window [class="Skype"] floating enable border normal
 for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
+
+#for_window [class="Vmware"] floating enable border pixel 20
+assign [class="Vmware"] $ws8
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
@@ -265,8 +264,8 @@ mode "resize" {
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Down resize shrink height 10 px or 10 ppt
+        bindsym Up resize grow height 10 px or 10 ppt
         bindsym Right resize grow width 10 px or 10 ppt
 
         # exit resize mode: Enter or Escape
@@ -274,30 +273,57 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
+
+
 # Lock screen
-bindsym $mod+F12 exec --no-startup-id blurlock
+bindsym $mod+Shift+F12 exec --no-startup-id i3lock -i ~/Pictures/feh_wallpapers/wallpaper.png -F -e -k
 
 # Screen Shot 
-bindsym $mod+Ctrl+a exec flameshot gui -r -g 
+bindsym $mod+Ctrl+a exec flameshot gui -r 
 # Autostart applications
 
-exec --no-startup-id compton --config ~/.config/compton.conf
+# 启动 todo
+#
+
+exec --no-startup-id gnome-todo
+assign [class="Gnome-todo"] $ws8
+#启动 polybar
+exec_always --no-startup-id bash /home/wen/.config/polybar/launch.sh
+
+#启动 vncviewer 
+#
+exec --no-startup-id remmina -i
+
+#启动 crossclip
+exec --no-startup-id /home/wen/vmware/share_folder/crossclip-v0.1.1-linux-x64/crossclip
+
+#启动vmware
+
+#exec --no-startup-id vmware
 exec --no-startup-id fcitx
+exec --no-startup-id vmrun -T ws start ~/vmware/Windows\ 7/Windows\ 7.vmx nogui
+# ubuntu root 认证窗口
+
+exec --no-startup-id lxpolkit
+
+exec --no-startup-id compton --config ~/.config/compton.conf
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 #exec --no-startup-id nitrogen --restore; sleep 1; picom -b
-#exec --no-startup-id manjaro-hello
 exec --no-startup-id nm-applet
-exec --no-startup-id xfce4-power-manager
+
+#exec_always --no-startup-id /home/wen/.config/polybar/hack/launch.sh
+#exec --no-startup-id xfce4-power-manager
+# Manjaro 的状态栏图标
 #exec --no-startup-id pamac-tray
 #exec --no-startup-id clipit
-# exec --no-startup-id blueman-applet
+exec --no-startup-id blueman-applet
 # exec_always --no-startup-id sbxkb
 # exec --no-startup-id start_conky_green
-exec --no-startup-id xautolock -time 10 -locker blurlock
-exec_always --no-startup-id ff-theme-util
-exec_always --no-startup-id fix_xcursor
+exec --no-startup-id xautolock -time 10 -locker "i3lock -i ~/Pictures/feh_wallpapers/wallpaper.png -F -e -k"
+#exec_always --no-startup-id ff-theme-util
+#exec_always --no-startup-id fix_xcursor
 
-exec --no-startup-id feh --bg-fill /home/wen/Pictures/wallpapers
+exec --no-startup-id feh --randomize --bg-fill /home/wen/Pictures/feh_wallpapers
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
@@ -331,54 +357,63 @@ set_from_resource $term_color14    color14
 set_from_resource $term_color15    color15
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
-bar {
-	i3bar_command i3bar
-	status_command i3status
-	position top
-
+#bar {
+#	i3bar_command i3bar
+#	status_command i3status
+#	position top
+	#status_command /home/wen/miniconda3/bin/python /home/wen/.config/i3/status.py
 ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
 #	tray_output primary
 #	tray_output eDP1
 
-	bindsym button4 nop
-	bindsym button5 nop
+#	bindsym button4 nop
+#	bindsym button5 nop
 #   font xft:URWGothic-Book 11
-	strip_workspace_numbers yes
+#	strip_workspace_numbers yes
 
-    colors {
-        background #222D31
-        statusline #F9FAF9
-        separator  #454947
+#   colors {
+#        background #222D31
+#        statusline #F9FAF9
+#        separator  #454947
 
 #                      border  backgr. text
-        focused_workspace  #F9FAF9 #16a085 #292F34
-        active_workspace   #595B5B #353836 #FDF6E3
-        inactive_workspace #595B5B #222D31 #EEE8D5
-        binding_mode       #16a085 #2C2C2C #F9FAF9
-        urgent_workspace   #16a085 #FDF6E3 #E5201D
-    }
-}
+#        focused_workspace  #F9FAF9 #16a085 #292F34
+#        active_workspace   #595B5B #353836 #FDF6E3
+#        inactive_workspace #595B5B #222D31 #EEE8D5
+#        binding_mode       #16a085 #2C2C2C #F9FAF9
+#        urgent_workspace   #16a085 #FDF6E3 #E5201D
+#    }
+#}
 
 # hide/unhide i3status bar
 bindsym $mod+m bar mode toggle
 
 # Theme colors
 # class                   border  backgr. text    indic.   child_border
-  client.focused          #000000 #285577 #ffffff #44eda7   #443da7
-  client.focused_inactive #2F3D44 #2F3D44 #1ABC9C #454948
-  client.unfocused        #2F3D44 #2F3D44 #1ABC9C #454948
-  client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
-  client.placeholder      #000000 #0c0c0c #ffffff #000000 
+#client.focused          #4c7899 #285577 #ffffff #0000ff   #285577
+client.focused          #0dfd69 #cecece #000000 #ec4432   #0dfd69
+client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+client.urgent           #2f343a #900000 #ffffff #900000   #900000
+client.placeholder      #ec4432 #0c0c0c #ffffff #ec4432   #0c0c0c
 
-  client.background       #2B2C2B
+client.background       #ffffff
+
+#  client.focused          #4c7899 #285577 #ffffff #2e9ef4   #285577
+#  client.focused_inactive #0000FF #2F3D44 #1ABC9C #454948
+#  client.unfocused        #2F3D44 #2F3D44 #1ABC9C #454948
+#  client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
+#  client.placeholder      #000000 #0c0c0c #ffffff #000000 
+
+#  client.background       #2B2C2B
 
 #############################
 ### settings for i3-gaps: ###
 #############################
 
 # Set inner/outer gaps
-gaps inner 2
-gaps outer 0
+# gaps inner 2
+# gaps outer 0
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
 # gaps inner|outer current|all set|plus|minus <px>
@@ -386,11 +421,11 @@ gaps outer 0
 # gaps outer all plus 5
 
 # Smart gaps (gaps used if only more than one container on the workspace)
-smart_gaps on
+# smart_gaps on
 
 # Smart borders (draw borders around container only if it is not the only container on this workspace) 
 # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
-#smart_borders on
+# smart_borders on
 
 # Press $mod+Shift+g to enter the gap mode. Choose o or i for modifying outer/inner gaps. Press one of + / - (in-/decrement for current workspace) or 0 (remove gaps for current workspace). If you also press Shift with these keys, the change will be global for all workspaces.
 set $mode_gaps Gaps: (o) outer, (i) inner
