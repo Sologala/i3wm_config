@@ -72,9 +72,11 @@ window:
     y: 10
   drynamic_padding: true
 font:
+  size: 15
   normal:
     family: "Ubuntu Mono"
     style: Regular
+    size: 16
   bold:
     family: "Ubuntu Mono"
     style: Bold

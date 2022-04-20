@@ -1,8 +1,8 @@
 # i3 config file (v4)
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
-
+exec xrandr --dpi 180
 exec_always xmodmap ~/.Xmodmap
-exec_always xset r rate 230 35
+exec_always xset r rate 280 35
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
 set $mod Mod1
 
