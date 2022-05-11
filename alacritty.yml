@@ -62,10 +62,10 @@ colors:
 #     cyan: '0x5FFDFF'
 #     white: '0xFEFFFF'
 background_opacity: 0.95
-#key_bindings:
-#  - { key: V,        mods: Control, action: Paste                  }
-#  - { key: C,        mods: Control, action: Copy                   }
-#  - { key: C,        mods: Control|Shift, chars: "\x03"         }
+key_bindings:
+    #- { key: V,        mods: Control, action: Paste                  }
+  - { key: C,        mods: Control, action: Copy                   }
+  - { key: C,        mods: Control|Shift, chars: "\x03"         }
 window:
   padding:
     x: 10
