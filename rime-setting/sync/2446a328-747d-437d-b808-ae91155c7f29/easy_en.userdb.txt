@@ -1,0 +1,21 @@
+# Rime user dictionary
+#@/db_name	easy_en.userdb
+#@/db_type	userdb
+#@/rime_version	1.5.3
+#@/tick	17
+#@/user_id	2446a328-747d-437d-b808-ae91155c7f29
+as 	as	c=2 d=1.97531 t=6
+d 	D	c=1 d=1 t=2
+dj 	DJ	c=1 d=1 t=7
+f 	F	c=1 d=1 t=8
+g 	G	c=1 d=1 t=14
+ha 	ha	c=1 d=1 t=4
+how 	how	c=1 d=1 t=10
+ia 	IA	c=1 d=1 t=15
+is 	is	c=1 d=1 t=16
+jfk 	jfk	c=1 d=1 t=3
+kl 	kl	c=1 d=1 t=9
+och 	och	c=1 d=1 t=5
+u 	U	c=1 d=1 t=13
+xi 	xi	c=1 d=1 t=12
+ze 	ze	c=1 d=1 t=17

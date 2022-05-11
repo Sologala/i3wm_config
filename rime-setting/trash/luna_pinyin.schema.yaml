@@ -1,0 +1,114 @@
+__include: "easy_en:/patch"
+custom_phrase:
+  db_class: stabledb
+  dictionary: ""
+  enable_completion: false
+  enable_sentence: false
+  initial_quality: 1
+  user_dict: custom_phrase
+customization: 3127398254
+easy_en:
+  initial_quality: "-0.618"
+emoji_suggestion:
+  opencc_config: emoji.json
+  option_name: emoji_suggestion
+engine:
+  filters:
+    - "simplifier@emoji_suggestion"
+    - simplifier
+    - uniquifier
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - script_translator
+    - "table_translator@custom_phrase"
+    - "table_translator@custom_phrase"
+key_binder:
+  import_preset: default
+punctuator:
+  half_shape:
+    "#": "#"
+    "$": ["¥", "$", "€", "£", "¢", "¤"]
+    "'": {pair: ["「", "」"]}
+    "*": "*"
+    "/": ["/", "÷"]
+    "<": ["《", "〈", "«", "<"]
+    "=": "="
+    ">": ["》", "〉", "»", ">"]
+    "@": "@"
+    "[": ["【", "["]
+    "\\": "、"
+    "]": ["】", "]"]
+    _: "──"
+    "`": "`"
+    "~": "~"
+  import_preset: symbols
+recognizer:
+  import_preset: default
+  patterns:
+    punct: "^/([0-9]0?|[A-Za-z]+)$"
+    reverse_lookup: "`[a-z]*'?$"
+reverse_lookup:
+  {}
+schema:
+  author:
+    - "佛振 <chen.sst@gmail.com>"
+  dependencies:
+    - stroke
+  description: |
+    Rime 預設的拼音輸入方案。
+    參考以下作品而創作：
+      * CC-CEDICT
+      * Android open source project
+      * Chewing - 新酷音
+      * opencc - 開放中文轉換
+    
+  name: "朙月拼音"
+  schema_id: luna_pinyin
+  version: 0.24.custom.3127398254
+speller:
+  algebra:
+    - "xform/^([b-df-np-z])$/$1_/"
+    - "erase/^xx$/"
+    - "abbrev/^([a-z]).+$/$1/"
+    - "abbrev/^([zcs]h).+$/$1/"
+    - "derive/([aeiou])ng$/$1gn/"
+    - "derive/([dtngkhrzcs])o(u|ng)$/$1o/"
+    - "derive/ong$/on/"
+    - "derive/ao$/oa/"
+    - "derive/([iu])a(o|ng?)$/a$1$2/"
+  alphabet: zyxwvutsrqponmlkjihgfedcba
+  delimiter: " '"
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: ["中文", "西文"]
+  - name: emoji_suggestion
+    reset: 1
+    states: [Yes, No]
+  - name: full_shape
+    states: ["半角", "全角"]
+  - name: simplification
+    reset: 1
+    states: ["漢字", "汉字"]
+  - name: ascii_punct
+    states: ["。，", "．，"]
+translator:
+  dictionary: luna_pinyin.extended
+  enable_correction: false
+  preedit_format:
+    - "xform/([nljqxyzcs])v/$1ü/"
