@@ -86,5 +86,5 @@ font:
   bold_italic:
     family: "Ubuntu Mono"
     style: Bold Italic
-env:
-    TERM: xterm-256color
+    #env:
+    #TERM: xterm-256color

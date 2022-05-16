@@ -2,20 +2,47 @@
 #@/db_name	easy_en.userdb
 #@/db_type	userdb
 #@/rime_version	1.5.3
-#@/tick	17
+#@/tick	215
 #@/user_id	2446a328-747d-437d-b808-ae91155c7f29
-as 	as	c=2 d=1.97531 t=6
-d 	D	c=1 d=1 t=2
-dj 	DJ	c=1 d=1 t=7
-f 	F	c=1 d=1 t=8
-g 	G	c=1 d=1 t=14
-ha 	ha	c=1 d=1 t=4
-how 	how	c=1 d=1 t=10
-ia 	IA	c=1 d=1 t=15
-is 	is	c=1 d=1 t=16
-jfk 	jfk	c=1 d=1 t=3
-kl 	kl	c=1 d=1 t=9
-och 	och	c=1 d=1 t=5
-u 	U	c=1 d=1 t=13
-xi 	xi	c=1 d=1 t=12
-ze 	ze	c=1 d=1 t=17
+Multi 	Multi	c=1 d=1 t=215
+No 	No	c=1 d=1 t=179
+an 	an	c=1 d=1 t=110
+ap 	AP	c=1 d=1 t=208
+as 	as	c=3 d=1.8696 t=215
+beijing 	Beijing	c=1 d=1 t=138
+d 	D	c=2 d=0.927743 t=215
+dj 	DJ	c=1 d=0.951229 t=215
+e 	E	c=1 d=1 t=127
+ent 	ent	c=1 d=1 t=160
+f 	F	c=2 d=0.955997 t=215
+for 	for	c=1 d=1 t=114
+g 	G	c=2 d=1.0431 t=215
+ga 	Ga	c=1 d=1 t=124
+gj 	gj	c=1 d=1 t=111
+ha 	ha	c=1 d=0.937067 t=215
+how 	how	c=1 d=0.965605 t=215
+i 	I	c=1 d=1 t=164
+i 	i	c=1 d=1 t=128
+i 	í	c=2 d=1.48191 t=165
+ia 	IA	c=1 d=0.99005 t=215
+is 	is	c=1 d=0.995012 t=215
+jfk 	jfk	c=2 d=0.932394 t=215
+jk 	jk	c=1 d=1 t=24
+ken 	ken	c=1 d=1 t=112
+kl 	kl	c=1 d=0.960789 t=215
+mei 	mei	c=2 d=1.98511 t=158
+ng 	NG	c=1 d=1 t=113
+nt 	n't	c=1 d=1 t=157
+nu 	nu	c=1 d=1 t=125
+och 	och	c=1 d=0.941765 t=215
+pi 	pi	c=1 d=1 t=206
+qq 	qq	c=1 d=1 t=119
+sad 	sad	c=1 d=1 t=23
+sj 	sj	c=1 d=1 t=205
+slan 	SLAN	c=1 d=1 t=195
+u 	U	c=3 d=1.96583 t=215
+w 	W	c=1 d=1 t=159
+we 	we	c=1 d=1 t=156
+with 	with	c=1 d=1 t=162
+xi 	xi	c=2 d=0.97531 t=215
+ze 	ze	c=1 d=1 t=215

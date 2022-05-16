@@ -8,7 +8,7 @@ configuration {
 	location: 8;
 	padding: 30;
 	yoffset: 70;
-	xoffset: 100;
+	xoffset: 1000;
 /*	fixed-num-lines: true;*/
 	show-icons: true;
 /*	terminal: "rofi-sensible-terminal";*/
@@ -19,7 +19,7 @@ configuration {
 /*	run-shell-command: "{terminal} -e {cmd}";*/
 /*	window-command: "wmctrl -i -R {window}";*/
 /*	window-match-fields: "all";*/
-	icon-theme: "Numix" ;
+/*	icon-theme: "Numix" ; */
 /*	drun-match-fields: "name,generic,exec,categories,keywords";*/
 /*	drun-categories: ;*/
 /*	drun-show-actions: false;*/
@@ -151,4 +151,4 @@ configuration {
 /*	me-accept-custom: "Control+MouseDPrimary";*/
 }
 element-icon { size: 4.8ch ; }
-@import "/usr/share/rofi/themes/fancy.rasi"
+@import "/usr/share/rofi/themes/Monokai.rasi"

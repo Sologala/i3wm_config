@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+mkdir -p build/vscode_build
+cd build/vscode_build
 
 OS=$(lsb_release -si);
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )";

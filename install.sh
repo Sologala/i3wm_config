@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+
 
 function is_link(){	
 	if [ ! -L $1 ]; then
@@ -22,10 +22,9 @@ function is_path_exist(){
 function copy_and_backup(){
 	dir_name=$(dirname $2)
 	file_name=$(basename $2)
-	echo 
-	echo "-------------------------"
 	echo dir: $dir_name
 	echo file: $file_name
+	
 	if [ ! -p $dir ] ; then
 		echo "Creating "$dir
 		mkdir -p $dir
@@ -40,8 +39,6 @@ function copy_and_backup(){
 	fi
 	echo Link $1 to $2
 	ln -s $1 $2
-	echo "------------------------------"
-	echo 
 }
 
 # 1. i3 config 
@@ -61,21 +58,6 @@ cp -r ./feh_wallpapers ~/Pictures/
 # 5. polybar
 copy_and_backup "$(pwd)/polybar/config.ini" "${HOME}/.config/polybar/config"
 copy_and_backup "$(pwd)/polybar/launch.sh" "${HOME}/.config/polybar/launch.sh"
-
-# rofi
-echo "Attempt to Install Rofi"
-sudo apt install rofi
-echo "Configure Rofi"
-copy_and_backup "$(pwd)/rofi.rasi" "${HOME}/.config/rofi/config.rasi"
-echo "Rofi config done \n \n"
-
-# rime config 
-echo "Configure Rime"
-sudo apt install fcitx fcitx-rime
-
-copy_and_backup "$(pwd)/rime-setting" "${HOME}/.config/fcitx/rime"
-echo "Rime config done \n \n"
-
 
 # 6. evdev ???
 sudo cp ./evdev /usr/share/X11/xkb/keycodes/
