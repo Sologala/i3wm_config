@@ -1,0 +1,45 @@
+[
+    {
+        "name": "alacritty",
+        "src": "./cfg/alacritty/.alacritty.toml",
+        "dst": "~/.alacritty.toml"
+    },
+    {
+        "name": "tmux",
+        "src": [
+            "./cfg/tmux/.tmux.conf",
+            "./cfg/tmux/.tmux/"
+        ],
+        "dst": [
+            "~/.tmux.conf",
+            "~/.tmux/"
+        ]
+    },
+    {
+        "name": "zsh",
+        "src": [
+            "./cfg/zsh/.zshrc"
+        ],
+        "dst": [
+            "~/.zshrc"
+        ]
+    },
+    {
+        "name": "rofi",
+        "src": [
+            "./cfg/rofi/config.rasi"
+        ],
+        "dst": [
+            "~/.config/rofi/config.rasi"
+        ]
+    },
+    {
+        "name": "flame_shot",
+        "src": [
+            "./bin/flame_shot.sh"
+        ],
+        "dst": [
+            "~/.local/bin/flame_shot.sh"
+        ]
+    }
+]
