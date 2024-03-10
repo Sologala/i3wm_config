@@ -1,6 +1,6 @@
 [window]
 dimensions = {columns = 130, lines = 40} 
-decorations=  "Full"
+decorations=  "None"
 
 [window.padding]
 x = 10
@@ -56,8 +56,8 @@ save_to_clipboard = true
 unfocused_hollow = true
 
 [font]
-normal = { family = "DejaVuSansMono Nerd Font", style = "Regular" }
-bold = { family = "DejaVuSansMono Nerd Font", style = "Bold" }
-italic = { family = "DejaVuSansMono Nerd Font", style = "Oblique" }
-bold_italic = { family = "DejaVuSansMono Nerd Font", style = "Bold Oblique" }
+normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
+bold = { family = "JetBrainsMono Nerd Font", style = "Bold" }
+italic = { family = "JetBrainsMono Nerd Font", style = "Oblique" }
+bold_italic = { family = "JetBrainsMono Nerd Font", style = "Bold Oblique" }
 size=14
