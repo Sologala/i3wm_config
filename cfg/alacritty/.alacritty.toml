@@ -3,10 +3,8 @@ dimensions = {columns = 130, lines = 40}
 decorations=  "None"
 
 [window.padding]
-x = 10
-y = 10
-# [font]
-# size = 9
+x = 1
+y = 1
 
 # TokyoNight Alacritty Colors
 # Default colors
