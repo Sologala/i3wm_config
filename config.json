@@ -5,6 +5,11 @@
         "dst": "~/.alacritty.toml"
     },
     {
+        "name": "wezterm",
+        "src": "./cfg/wezterm/.wezterm.lua",
+        "dst": "~/.wezterm.lua"
+    },
+    {
         "name": "tmux",
         "src": [
             "./cfg/tmux/.tmux.conf",
