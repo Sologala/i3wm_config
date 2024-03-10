@@ -1,7 +1,9 @@
 local wezterm = require 'wezterm'
 local act = wezterm.action
 return {
-    -- use_ime = false,
+    use_ime = true,
+    xim_im_name = "fcitx",
+    ime_preedit_rendering = "Builtin",
     initial_rows = 40,
     initial_cols = 150,
     window_decorations = "RESIZE",
