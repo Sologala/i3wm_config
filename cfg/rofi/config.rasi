@@ -144,5 +144,6 @@ configuration {
 /*	me-accept-custom: "Control+MouseDPrimary";*/
 }
 
-/*@theme "arthur"*/
+element-icon { size: 4.8ch ; }
+@import "/usr/share/rofi/themes/Monokai.rasi"
 
