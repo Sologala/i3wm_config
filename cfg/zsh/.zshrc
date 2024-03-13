@@ -164,7 +164,7 @@ alias dca="conda deactivate"
 alias cb="catkin build -DCMAKE_EXPORT_COMPILE_COMMANDS=on"
 alias jqm="jq -s 'map(.[])' build/**/compile_commands.json > compile_commands.json"
 alias ssros="source ./devel/setup.zsh"
-
+alias ipy='ipython'
 export XMODIFIERS=@im=fcitx
 export QT_IM_MODULE=fcitx
 export QT4_IM_MODULE=fcitx
