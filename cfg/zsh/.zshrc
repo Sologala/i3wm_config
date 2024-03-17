@@ -142,6 +142,7 @@ set sock_port='20170'
 # export https_proxy=http://127.0.0.1:20172;export http_proxy=http://127.0.0.1:20171;export all_proxy=socks5://127.0.0.1:20170
 # export DISPLAY=127.0.0.1:10.0
 export https_proxy=http://127.0.0.1:7890;export http_proxy=http://127.0.0.1:7890;export all_proxy=socks5://127.0.0.1:7890
+# export https_proxy=http://192.168.1.14:49191;export http_proxy=http://192.168.1.14:49191;export all_proxy=socks5://192.168.1.14:49191
 export MESA_GL_VERSION_OVERRIDE=3.3
 alias rr=ranger
 alias lg=lazygit
@@ -161,6 +162,8 @@ alias ros1="source /opt/ros/noetic/setup.zsh"
 alias ca="conda activate"
 alias dca="conda deactivate"
 
+alias lg="lazygit"
+
 alias cb="catkin build -DCMAKE_EXPORT_COMPILE_COMMANDS=on"
 alias jqm="jq -s 'map(.[])' build/**/compile_commands.json > compile_commands.json"
 alias ssros="source ./devel/setup.zsh"
@@ -169,9 +172,9 @@ export XMODIFIERS=@im=fcitx
 export QT_IM_MODULE=fcitx
 export QT4_IM_MODULE=fcitx
 
-export PATH=$PATH:/usr/local/cuda-12.4/bin
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-12.4/lib64
-
+export PATH=$PATH:/usr/local/cuda-12.3/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-12.3/lib64/
+export CUDA_HOME=$CUDA_HOME:/usr/local/cuda-12.3
 
 # wine env
 export WINEARCH=win32

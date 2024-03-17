@@ -30,7 +30,7 @@ def make_link(src, dst):
 
     if not os.path.exists(dir_name):
         print("dir {} not exist".format(dir_name))
-        os.mkdirs(dir_name)
+        os.makedirs(dir_name)
 
     try:
         print("{} -> {}".format(src, dst))
