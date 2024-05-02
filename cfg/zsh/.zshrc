@@ -147,7 +147,7 @@ export MESA_GL_VERSION_OVERRIDE=3.3
 alias rr=ranger
 alias lg=lazygit
 
-alias wezterm='flatpak run org.wezfurlong.wezterm'
+
 export PATH=${PATH}:${HOME}/.local/bin
 
 # export GOROOT=/opt/go
@@ -158,6 +158,7 @@ export PATH=${PATH}:${HOME}/.local/bin
 export PATH=$PATH:/usr/local/go/bin 
 export PATH=$PATH:~/.cargo/bin/ 
 alias ros1="source /opt/ros/noetic/setup.zsh"
+alias ssros="source /opt/ros/iron/setup.zsh"
 
 alias ca="conda activate"
 alias dca="conda deactivate"
@@ -166,7 +167,7 @@ alias lg="lazygit"
 
 alias cb="catkin build -DCMAKE_EXPORT_COMPILE_COMMANDS=on"
 alias jqm="jq -s 'map(.[])' build/**/compile_commands.json > compile_commands.json"
-alias ssros="source ./devel/setup.zsh"
+# alias ssros="source ./devel/setup.zsh"
 alias ipy='ipython'
 export XMODIFIERS=@im=fcitx
 export QT_IM_MODULE=fcitx
@@ -180,4 +181,4 @@ export CUDA_HOME=$CUDA_HOME:/usr/local/cuda-12.3
 export WINEARCH=win32
 # export WINEPREFIX=/home/wen/Wine/WeChat
 #
-
+alias sudo="sudo -E"
