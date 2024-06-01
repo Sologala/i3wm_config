@@ -24,7 +24,7 @@ function download_from_github(){
     repo_name=$2
     tag_name=$3
     file_name=$4
-    wget -c https://github.com/${user_name}/${repo_name}/releases/download/${tag}/${file_name} -P /tmp/${repo_name}_temp
+    wget -c https://github.com/${user_name}/${repo_name}/releases/download/${tag_name}/${file_name} -P /tmp/${repo_name}_temp
     return $?
 }
 
