@@ -9,8 +9,8 @@ cd /tmp/rime/
 
 git clone https://github.com/Sologala/rime-ice.git
 
-sudo cp -rf ./rime-ice/* /usr/share/rime-data/
+# sudo cp -rf ./rime-ice/* /usr/share/rime-data/
 
-# cp -rf ./rime-ice/* ~/.var/app/org.fcitx.Fcitx5/data/fcitx5/rime/
+cp -rf ./rime-ice/* ~/.var/app/org.fcitx.Fcitx5/data/fcitx5/rime/
 
 

@@ -44,7 +44,7 @@ cmake  .. -Wno-dev \
     -DOPENCV_ENABLE_NONFREE=1\
     -DOPENCV_EXTRA_MODULES_PATH="../../opencv_contrib/modules"
     
-make -j5
+make -j10
 sudo make install
 
 
