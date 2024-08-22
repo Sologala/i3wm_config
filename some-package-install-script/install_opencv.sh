@@ -48,3 +48,24 @@ make -j10
 sudo make install
 
 
+
+
+#
+#cmake  .. -Wno-dev \
+	#     -DCMAKE_BUILD_TYPE=Release\
+	#     -DCMAKE_INSTALL_PREFIX="/opt/opencv/$version"\
+	#     -DOPENCV_ENABLE_NONFREE=1\
+	#     -DOPENCV_EXTRA_MODULES_PATH="../../opencv_contrib/modules"\
+	# -DWITH_CUDA=ON \
+	# -DWITH_CUDNN=ON \
+	# -DOPENCV_DNN_CUDA=ON \
+	# -DWITH_LIBV4L=ON\
+	# -DENABLE_FAST_MATH=1 \
+	# -DCUDA_FAST_MATH=1 \
+	# -DCUDA_ARCH_BIN=6.1 \
+	# -DWITH_CUBLAS=1 \
+	# -DCUDNN_VERSION=8.9 \
+	# -DCUDNN_INCLUDE_DIR=/usr/local/cuda-11.6/include \
+	# -DCUDNN_LIBRARY=/usr/local/cuda-11.6/lib64/libcudnn.so \ 
+#
+
