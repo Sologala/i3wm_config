@@ -156,6 +156,7 @@ export PATH=${PATH}:${HOME}/.local/bin
 # # set GO111MODULE=‘off’
 
 export PATH=$PATH:/usr/local/go/bin 
+export PATH=$PATH:${HOME}/.local/my_install/bin
 export PATH=$PATH:~/.cargo/bin/ 
 alias ros1="source /opt/ros/noetic/setup.zsh"
 alias ssros="source /opt/ros/iron/setup.zsh"
@@ -173,9 +174,9 @@ export XMODIFIERS=@im=fcitx
 export QT_IM_MODULE=fcitx
 export QT4_IM_MODULE=fcitx
 
-export PATH=$PATH:/usr/local/cuda-12.3/bin
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-12.3/lib64/
-export CUDA_HOME=$CUDA_HOME:/usr/local/cuda-12.3
+export PATH=$PATH:/usr/local/cuda-11.3/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-11.3/lib64/
+export CUDA_HOME=$CUDA_HOME:/usr/local/cuda-11.3
 
 # wine env
 export WINEARCH=win32
